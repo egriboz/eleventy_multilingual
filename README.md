@@ -2,5 +2,5 @@
 multilingual eleventy
 
 # resources
-https://www.webstoemp.com/blog/multilingual-sites-eleventy/
-https://github.com/lea37/eleventy-multilingual
+- https://www.webstoemp.com/blog/multilingual-sites-eleventy/
+- https://github.com/lea37/eleventy-multilingual
