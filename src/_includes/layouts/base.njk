@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <title>{% if metaTitle %}{{ metaTitle }} - {% endif %}{{ site[locale].title }}</title>
+  {% set currentUrl = siteinfo.url + page.url %}
+  {% metagen
+    title=title,
+    desc=desc,
+    url=currentUrl,
+    img=metadata.img,
+    twitter_card_type=type,
+    twitter_handle=twitter,
+    name=siteinfo.authorHandle
+  %}
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  
+  {% include "partials/header.njk" %}
+
+  {% block content %}{% endblock %}
+
+  {% include "partials/footer.njk" %}
+
+</body>
+</html>

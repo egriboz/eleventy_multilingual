@@ -1,0 +1,24 @@
+{
+  "name": "multilingual_eleventy",
+  "version": "0.0.1",
+  "description": "multilingual eleventy",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "scripts": {
+    "clear": "rm -rf './dist/'",
+    "dev": "npx eleventy --serve",
+    "build": "yarn clear & npx eleventy",
+    "postinstall": "yarn build"
+  },
+  "devDependencies": {
+    
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.15",
+    "luxon": "^2.3.1",
+    "eleventy-plugin-metagen": "^1.7.11"
+  }
+}

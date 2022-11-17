@@ -1,0 +1,42 @@
+---
+permalink: "/{{ locale }}/blog/index.html"
+translationKey: "blogpage"
+title: "Blog"
+desc: "Blog Ana sayfası"
+
+metadata:
+    title: {{title}}
+    desc: {{desc}}
+    img: https://github.com/egriboz/homepage/blob/main/public/raven.gif
+    img_alt: Blog Ana sayfa img alt
+    twitter_handle: egriboz
+    name: Fatih Eğriboz
+    comments: true
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle= "Blog archive" %}
+
+{% block content %}
+
+  <h2>Blogposts archive {{siteinfo.authorHandle}}</h2>
+  <h3>{{ 3  | topla(30, 5) }}</h3>
+  
+  {% for post in collections.posts_en %}
+    {% if loop.first %}<ul>{% endif %}
+      <li>
+
+        <article>
+          <p><time datetime="{{ post.date | dateIso }}">{{ post.date | dateFull(locale) }}</time></p>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <div>
+            {{ post.templateContent | safe }}
+          </div>
+        </article>
+
+      </li>
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+
+{% endblock %}
