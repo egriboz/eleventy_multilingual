@@ -2,7 +2,7 @@
 <html lang="{{ locale }}">
 <head>
   <title>{% if metaTitle %}{{ metaTitle }} - {% endif %}{{ site[locale].title }}</title>
-  {% set currentUrl = siteinfo.url + page.url %}
+  {% set currentUrl = site.url + page.url %}
   {% metagen
     title=title,
     desc=desc,
@@ -10,7 +10,7 @@
     img=metadata.img,
     twitter_card_type=type,
     twitter_handle=twitter,
-    name=siteinfo.authorHandle
+    name=site.authorHandle
   %}
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>

@@ -1,12 +1,12 @@
 ---
 title: "First blogpost en"
-translationKey: "blogpost20190412"
+translationKey: "first-blogpost"
 metadata:
     title: {{title}}
     desc: {{title}}
-    url: https://egriboz.com/blogpost20190412/
     img: https://egriboz.com/images/arch-spiral-large.jpg
 ---
+Content in English
 Try to put a blank line before...
 
 # Heading

@@ -20,7 +20,7 @@ metadata:
 
 {% block content %}
 
-  <h2>Blogposts archive {{siteinfo.authorHandle}}</h2>
+  <h2>Blogposts archive {{site.authorHandle}}</h2>
   <h3>{{ 3  | topla(30, 5) }}</h3>
   
   {% for post in collections.posts_en %}
