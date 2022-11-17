@@ -1,9 +1,7 @@
 {% for lgg in languages %}
   {% if loop.first %}<ul class="c-lggnav">{% endif %}
-
   {# set translatedUrl to the homepage of that language by default #}
   {% set translatedUrl %}/{{lgg.locale}}/{% endset %}
-
   {# set current language class #}
   {% set activeClass = "" %}
   {% set activeAria = "" %}
@@ -11,7 +9,6 @@
     {% set activeClass = "is-active" %}
     {% set activeAria = 'aria-current="page"' | safe %}
   {% endif %}
-
   {# loop through all the content of the site #}
   {% for item in collections.all %}
     {# check matches #}
@@ -19,10 +16,8 @@
       {% set translatedUrl = item.url %}
     {% endif %}
   {% endfor%}
-
   <li class="c-lggnav__item">
     <a class="c-lggnav__link  {{ activeClass }}" {{ activeAria }} href="{{ translatedUrl }}">{{ lgg.label }}</a>
   </li>
-
   {% if loop.last %}</ul>{% endif %}
 {% endfor %}

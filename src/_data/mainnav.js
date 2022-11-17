@@ -7,6 +7,10 @@ module.exports = {
     {
       label: "Makaler",
       url: "/tr/blog/"
+    },
+    {
+      label: "Örnek",
+      url: "/tr/ornek/"
     }
   ],
   en: [
@@ -17,6 +21,10 @@ module.exports = {
     {
       label: "Blog",
       url: "/en/blog/"
+    },
+    {
+      label: "Example",
+      url: "/en/sample/"
     }
   ]
 };
