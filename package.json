@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "clear": "rm -rf './dist/'",
-    "dev": "npx eleventy --serve",
+    "dev": "npx eleventy --serve --quiet",
     "build": "yarn clear & npx eleventy",
     "postinstall": "yarn build"
   },
